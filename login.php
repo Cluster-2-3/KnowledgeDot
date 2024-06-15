@@ -9,7 +9,7 @@
             $password = md5($_POST['password']);
             $user_type = $_POST['user_type'];
 
-            $select = " SELECT * FROM student_signup WHERE name = '$email' && password = '$password' ";
+            $select = " SELECT * FROM student_signup WHERE email = '$email' && password = '$password' ";
 
             $result = mysqli_query($conn, $select);
 
@@ -17,11 +17,11 @@
                $row = mysqli_fetch_array($result);
 
                if($row['user_type'] == 'teacher'){
-                    $_SESSION['teacher_name'] = $row['name'];
+                    $_SESSION['teacher_email'] = $row['email'];
                     header('location:teachersPage.php');
 
                }elseif($row['user_type'] == 'student'){
-                    $_SESSION['student_name'] = $row['name'];
+                    $_SESSION['student_email'] = $row['email'];
                     header('location:studentPage.php');
                }
                 
@@ -45,13 +45,13 @@
 				<h3>Knowledge Dot</h3>
 			</div>	
 			<h3 style="margin-left: 90px; font-family:Gilroy-Bold; font-weight:400px; margin-top:30px;" >Login</h3>
-			<form  method="post" action="logion.php" class="input-box">
+			<form  method="post" class="input-box" id="login">
 				<label for="name" class="log-text"> Email</label><br>
 				<input type="text" class="inputValue" name="email" placeholder="username@gmail.com" ><br>
 				<label for="password" class="log-text"> Password</label><br>
 				<input type="password" class="inputValue" name="password" placeholder="Password"><br>
 				<a href = "#" class="link1"><p style="font-size:12px; color:white; margin:5px;margin-left:10px;">Forgot Password?</p></a>
-		        <input type="submit" name="submit" id="submit-btn" value="Login">
+		        <input type="submit" name="submit" id="submit-btn" value="SignIn">
 			</form>	
 
 

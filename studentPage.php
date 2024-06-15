@@ -2,8 +2,8 @@
 @include 'config.php';
 session_start();
 
-if(!isset($_SESSION['student_name'])){
-    header('location:loginPage.php');
+if(!isset($_SESSION['student_email'])){
+    header('location:login.php');
 }
 
 ?>
@@ -33,7 +33,7 @@ if(!isset($_SESSION['student_name'])){
 </head>
 <body>
     <h3>Hi, Students</h3>
-    <h1>Welcome <span><?php echo $_SESSION['student_name'] ?></span></h1>
+    <h1>Welcome <span><?php echo $_SESSION['student_email'] ?></span></h1>
     <a href="login.php" class="logout-btn">Logout</a>
     
 </body>
