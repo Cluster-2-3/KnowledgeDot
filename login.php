@@ -60,8 +60,8 @@
 		<div class="form-box">
 			<div class="button-box">
 				<div id="btn"></div>
-				<button type="button" class="toggle-btn" onclick="login()"><a href="login.php" style="text-decoration:none;">Login</a></button>
-				<button type="button" class="toggle-btn" onclick="signup()"><a href="signupPage.php" style="text-decoration:none;"> Signup</a></button>
+				<center><button type="button" class="toggle-btn" onclick="login()"><a href="login.php" style="text-decoration:none;">Login</a></button></center>
+				<!-- <button type="button" class="toggle-btn" onclick="signup()"><a href="signupPage.php" style="text-decoration:none;"> Signup</a></button> -->
 			</div>
 			<!--login form-->
 			<form class="input-box" id="login" method="post" action="login.php">
