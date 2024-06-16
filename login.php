@@ -35,8 +35,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Knowlede Dot</title>
-        <link rel="icon" type="image/x-icon" href="images/titlelogo.ico">
+		<title></title>
 		<link rel="stylesheet" type="text/css" href="css/loginStyle.css">         
 	</head>
 	<body>
